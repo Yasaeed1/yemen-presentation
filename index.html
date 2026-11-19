@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183833">
+  <meta name="description" content="عرض تفاعلي يستكشف التراث الهندسي والفكري والطبيعي في اليمن عبر عشر شرائح.">
+  <title>اليمن: ثلاثية العبقرية والمكان</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="presentation.js" defer></script>
+</head>
+<body>
+  <a href="#viewer" class="skip-link">انتقل إلى العرض</a>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="site-name" href="./">
+        <span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>اليمن <small>عرض تقديمي</small></span>
+      </a>
+      <a class="pdf-link" href="yemen-presentation.pdf" type="application/pdf">
+        ملف العرض الأصلي <bdi>PDF</bdi>
+      </a>
+    </div>
+  </header>
+  <main class="shell">
+    <div class="intro">
+      <div>
+        <h1>اليمن<span>:</span> ثلاثية العبقرية والمكان</h1>
+        <p>رحلة بصرية في التراث الهندسي والفكري والطبيعي.</p>
+      </div>
+      <span class="slide-total">١٠ شرائح</span>
+    </div>
+    <div class="layout">
+      <section id="viewer" class="viewer" aria-label="عارض الشرائح">
+        <div class="viewer-head">
+          <p class="slide-topic" id="topic">مقدمة العرض</p>
+          <button class="subtle" type="button" id="zoom" hidden>تكبير الشريحة</button>
+        </div>
+        <figure class="frame">
+          <img id="slide" src="slides/slide-01.webp" width="1376" height="768" fetchpriority="high"
+               alt="غلاف العرض، يجمع رسم سد مأرب ومئذنة وشجرة دم الأخوين لتمثيل محاور التراث الثلاثة.">
+        </figure>
+        <div class="controls" id="controls" hidden>
+          <button type="button" class="pager" id="previous" disabled><span aria-hidden="true">›</span> السابق</button>
+          <p class="position" id="position" role="status" aria-live="polite">١ من ١٠</p>
+          <button type="button" class="pager primary" id="next">التالي <span aria-hidden="true">‹</span></button>
+        </div>
+        <noscript><p>افتح ملف العرض الأصلي من أعلى الصفحة لمشاهدة الشرائح كلها.</p></noscript>
+      </section>
+      <nav class="outline" id="outline" aria-labelledby="outline-heading" hidden>
+        <div class="outline-heading"><h2 id="outline-heading">فهرس الشرائح</h2></div>
+        <ol id="slide-list"></ol>
+      </nav>
+    </div>
+  </main>
+  <dialog id="zoom-dialog" aria-labelledby="zoom-title">
+    <div class="dialog-head">
+      <h2 id="zoom-title">تكبير الشريحة</h2>
+      <button id="fit" type="button" class="subtle" aria-pressed="false">ملاءمة الشاشة</button>
+      <form method="dialog"><button type="submit" class="pager">إغلاق</button></form>
+    </div>
+    <p class="zoom-hint">مرّر الصورة لقراءة أجزائها، أو اعرضها كاملة بزر «ملاءمة الشاشة».</p>
+    <div class="zoom-viewport" id="zoom-viewport" tabindex="0" role="region" aria-label="الشريحة المكبّرة القابلة للتمرير">
+      <img id="large-slide" width="1376" height="768" alt="">
+    </div>
+  </dialog>
+</body>
+</html>
